@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Dashboard
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        {% include 'adminuser/sidebar.html' %}
+       
+       <div class="col-sm-8 offset-md-3 offset-lg-2" style="top:95px;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 mt-5">
+                            <div class="card text-white" style="background-color:#bd3a34;">
+                                <h4 class="card-header text-left">Available Users</h4>
+                                <div class="card-body  text-center">
+                                    <h2 class="card-text">{{users}}</h2>
+                                    <a href="{% url 'available-user' %}" class="btn text-white border float-right">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-5">
+                            <div class="card  text-white" style="background-color:#ffc857;">
+                                <h4 class="card-header text-left">New Applications</h4>
+                                <div class="card-body  text-center">
+                                    <h2 class="card-text">{{new_applicants}}</h2>
+                                    <a href="{% url 'new-application' %}" class="btn text-white border float-right">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-5">
+                            <div class="card text-white" style="background-color:#323031;">
+                                <h4 class="card-header text-left">Available Packages</h4>
+                                <div class="card-body  text-center">
+                                    <h2 class="card-text">{{packages}}</h2>
+                                    <a href="{% url 'manage-packages' %}" class="btn text-white border float-right">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+    </div>
+</div>
+{% endblock content %}
+
+
+
+   

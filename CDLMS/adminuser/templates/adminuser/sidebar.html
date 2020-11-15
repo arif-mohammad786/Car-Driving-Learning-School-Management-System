@@ -1,0 +1,67 @@
+
+<nav class="col-lg-2 col-sm-4 col-md-3 navbar navbar-expand-md" style="top:65px;left:-13px;position:fixed;z-index:2;">
+                    <button style="" class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i class="fas fa-bars" style="color:grey; font-size:28px;"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse border-right  " id="sidebar">
+                        <div class="accordion sidebar" id="accordionExample">
+                            <div class="card " style="width:220px;background-color:#ccc5b9">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 {% if page == 'Dashboard' %}sidebar-select{% endif %}" >
+                                        <a href="{% url 'dashboard' %}" class="btn btn-link btn-block text-left font-weight-bold" style="color:black;text-decoration:none;">
+                                        <i class="fas fa-tachometer-alt mr-2" style="color:#403d39"></i>Dashboard</a>
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div class="card dropdown" style="width:220px;background-color:#ccc5b9;">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 {% if page == 'Add New Package' or page == 'Manage Packages' or page == 'Update Package' %}sidebar-select{% endif %}">
+                                        <button class="btn btn-link btn-block text-left dropdown-toggle font-weight-bold text-decoration-none" style="color:black;" type="button" data-toggle="collapse" data-target="#animals" aria-expanded="true" aria-controls="animals">
+                                        <i class="fas fa-box mr-2" style="color:#403d39"></i>Packages
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="animals" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <a href="{% url 'addnewpackage' %}" class="pl-2 text-dark">Add Package</a><hr>
+                                        <a href="{% url 'manage-packages' %}" class="pl-2 text-dark">Manage Package</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card " style="width:220px;background-color:#ccc5b9">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 {% if page == 'Available Users' %}sidebar-select{% endif %}" >
+                                        <a href="{% url 'available-user' %}" class="btn btn-link btn-block text-left font-weight-bold" style="color:black;text-decoration:none;">
+                                        <i class="fas fa-users mr-2" style="color:#403d39"></i>Available Users</a>
+                                    </h2>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card " style="width:220px;background-color:#ccc5b9">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0" >
+                                        <a href="#" class="btn btn-link btn-block text-left font-weight-bold" style="color:black;text-decoration:none;">
+                                        <i class="fas fa-phone-square-alt mr-2" style="color:#403d39"></i>Contact Details</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="card " style="width:220px;background-color:#ccc5b9">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0" >
+                                        <a href="#" class="btn btn-link btn-block text-left font-weight-bold" style="color:black;text-decoration:none;">
+                                        <i class="fas fa-address-card mr-2" style="color:#403d39"></i>About Details</a>
+                                    </h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            

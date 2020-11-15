@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+
+{% block pagetype %}
+     <div class="container-fluid jumbotron short-image img-fluid shadow-sm" style="background-image:url('/static/core/images/car.jpg');">
+    </div>
+{% endblock pagetype %}  
+
+{% block content %}
+    <div class="container">
+        <h1 class=" shadow-sm text-center" style="font-style:italic;text-decoration:underline;color:#db3a34">About Us</h1>
+        <div class="row">
+            <div class="col-sm-8 offset-2 my-4 border-left border-right border-success" style="font-style:italic;">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Sit velit optio dolore eligendi inventore in totam necessitatibus 
+                    nihil, modi facilis tenetur! Vitae quas ex quibusdam nemo non 
+                    maiores reprehenderit! Ea debitis fugiat minus omnis accusantium.
+                     Dolor, cumque asperiores voluptate aliquid qui eaque aut 
+                    excepturi id architecto non reprehenderit impedit eos.
+                </p>
+            </div>
+        </div>
+    </div>
+  
+{% endblock content %}
+
+{% block footer %}
+    {% include 'core/footer.html' %}
+{% endblock footer %}

@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Available Packages
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+
+{% block pagetype %}
+     <div class="container-fluid jumbotron short-image img-fluid shadow-sm" style="background-image:url('/static/core/images/car.jpg');">
+    </div>
+{% endblock pagetype %}  
+
+{% block content %}
+    <div class="container">
+        <h1 class=" shadow-sm" style="font-style:italic;text-decoration:underline;color:#db3a34">Available Packages</h1>
+        {% for package in packages %}
+            <table class="table table-border mt-5">
+                    <tr class="border-top">
+                        <th class="table-border table-padding" style="width:300px;">Package Name</th>
+                        <td class="table-border table-padding">{{package.pname}}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-border table-padding" style="width:300px;">Package Description</th>
+                        <td class="table-border table-padding">{{package.pdesc}}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-border table-padding" style="width:300px;">Training Duration</th>
+                        <td class="table-border table-padding">{{package.pduration}}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-border table-padding" style="width:300px;">Package Price</th>
+                        <td class="table-border table-padding">{{package.pprice}}</td>
+                    </tr>
+            </table>
+        {% endfor %}
+    </div>
+  
+{% endblock content %}
+
+{% block footer %}
+    {% include 'core/footer.html' %}
+{% endblock footer %}

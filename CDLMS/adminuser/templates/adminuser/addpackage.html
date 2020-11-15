@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{page}}
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-sm-4 col-md-3" style="left:-13px;">
+                {% include 'adminuser/sidebar.html' %}
+            </div>
+            <div class="col-sm-8 " style="top:95px;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="font-weight-bold text-secondary text-right">Add New Package</h3>
+                            <form action="" method="POST" novalidate>
+                            {% csrf_token %}
+                            {% for message in messages %}
+                                <h3 class="text-success">{{message}}</h3>
+                            {% endfor %}
+                                {% for field in form %}
+                                    <span>{{field.label_tag}}</span>
+                                    <span>{{field}}</span>
+                                    <span style="color:red;list-style:none;">{{field.errors|striptags}}</span>
+                                {% endfor %}
+                                <input type="submit" class="btn btn-primary mt-3" value={% if page == 'Update Package' %}
+                                Update {% else %}Add{% endif %}>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
+
+
+
+   

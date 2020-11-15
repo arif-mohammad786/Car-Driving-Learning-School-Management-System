@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Apply Now
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+
+{% block pagetype %}
+     <div class="container-fluid jumbotron short-image img-fluid shadow-sm" style="background-image:url('/static/core/images/car.jpg');">
+    </div>
+{% endblock pagetype %}  
+
+{% block content %}
+    <div class="container">
+            <h1 class=" shadow-sm text-center" style="font-style:italic;text-decoration:underline;color:#db3a34">Apply Now</h1>
+        <div class="row  bg-light">
+            <div class="col-sm-8  ">
+                <form action="" method="POST"  enctype="multipart/form-data" novalidate>
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h3 class="text-{{message.tags}}">{{message}}</h3>
+                    {% endfor %}
+                {% endif %}
+                    {% for field in form %}
+                        <div class="form-group">
+                            <span class="font-italic ">{{field.label_tag}}</span>
+                            <span>{{field}}</span>
+                            <span style="list-style-type:None;color:red;">{{field.errors|striptags}}</span>
+                        </div>
+                    {% endfor %}
+                    <input type="submit" class="btn btn-primary mb-4">
+                </form>
+            </div>
+        </div>
+    </div>
+  
+{% endblock content %}
+
+{% block footer %}
+    {% include 'core/footer.html' %}
+{% endblock footer %}

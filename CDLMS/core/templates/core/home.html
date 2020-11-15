@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fluid jumbotron navimage img-fluid shadow-sm" style="background-image:url('/static/core/images/car.jpg');">
+        <div class="row">
+            <div class="col-sm-6 offset-3">
+            <h1 class="font-weight-bold mt-5" style="color:#db3a34">We Help You To Be a Safe Driver</h1>
+                 <p style="margin-top:30px;color:#ffc857" class="font-weight-bold">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem aliquam
+              <br><span style="margin-left:70px;">provident sunt nemo quia libero veniam nobis.</span>
+        </p>
+            </div>
+        </div>
+    </div>
+    <div class="container services mb-5" >
+        <div class="row">
+             <div class="col-sm-4 p-3">
+            <img src="{% static 'core/images/pass.png' %}" width="300px" height="300px">
+        </div>
+        <div class="col-sm-8 pt-5" style="background-color:#ffc857;opacity:0.8;border-radius:20px;">
+            <h1 class="font-weight-bold text-secondary text-center" >Our Services</h1>
+        <p style="font-family:sans-serif;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, in odit
+             dolore nobis voluptatem dolor eaque accusamus, ipsum asperiores expedita 
+             autem pariatur recusandae corporis non eum possimus aperiam nam laboriosam! 
+             Eligendi amet aut quas fuga, omnis consequatur culpa minus laboriosam dolorum
+             cupiditate ab iure recusandae ratione molestiae officiis, fugiat tenetur?
+        </p>
+        </div>
+        </div>
+    </div>
+
+    <div class="container mb-5" style="font-family: 'Ubuntu', sans-serif;">
+        <h1 class="font-weight-bold text-secondary" >Proud To Follow Traffic Rules</h1>
+        <div class="row">
+            <div class="col-sm-3 p-3">
+                <img src="{% static 'core/images/pol.png' %}" width="300px" height="300px">
+            </div>
+            <div class="col-sm-4 offset-1 pt-5" style="opacity:0.8;border-radius:20px;">
+                <img src="{% static 'core/images/rules.jpg' %}" width="400px" height="300px">
+            </div>
+            <div class="col-sm-3 offset-1">
+                <ul style="padding:0px;margin-top:40px;" class="font-weight-bold text-secondary">
+                    <li class="shadow-sm p-2 bg-light border-bottom">Alert Today-Alive Tomorrow</li>
+                    <li class="shadow-sm p-2 bg-light border-bottom">Normal Speed Meets Every Need</li>
+                    <li class="shadow-sm p-2 bg-light border-bottom">Night Doubles Traffic Troubles</li>
+                    <li class="shadow-sm p-2 bg-light border-bottom">Stop Accidents Before They Stop You</li>
+                    <li class="shadow-sm p-2 bg-light border-bottom">Speed Thrills But Kills!</li>
+                    <li class="shadow-sm p-2 bg-light border-bottom">Ice and Snow-Take it Slow!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+{% block footer %}
+    {% include 'core/footer.html' %}
+{% endblock footer %}

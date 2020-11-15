@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Applicant Detail
+{% endblock title %}
+
+{% block navbar %}
+    {% include 'core/navbar.html' %}
+{% endblock navbar %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-sm-4 col-md-3" style="left:-13px;">
+                {% include 'adminuser/sidebar.html' %}
+            </div>
+            <div class="col-sm-12 col-md-10" style="top:95px;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-4 col-lg-11 offset-lg-0 bg-light" style="position:absolute;z-index:1;">
+                            <h3 class="font-weight-bold text-secondary text-right pt-3">Applicant Detail</h3>
+                          
+                            <table class="table table-border mt-3 p-3">
+                                <tr>
+                                    <th class="table-border table-padding" >Applicant ID</th>
+                                    <td class="table-border table-padding" style="width:300px;">{{applicant.id}}</td>
+                                    <th class="table-border table-padding" style="width:200px;">Package</th>
+                                    <td class="table-border table-padding" >{{applicant.package}}</td>
+                                </tr>
+                                  <tr>
+                                    <th class="table-border table-padding" >Start Date</th>
+                                    <td class="table-border table-padding" style="width:300px;">{{applicant.start_date}}</td>
+                                    <th class="table-border table-padding" style="width:200px;">Timing</th>
+                                    <td class="table-border table-padding" >{{applicant.timing}}</td>
+                                </tr>
+                                 <tr>
+                                    <th class="table-border table-padding" >Name</th>
+                                    <td class="table-border table-padding" style="width:300px;">{{applicant.name}}</td>
+                                    <th class="table-border table-padding" style="width:200px;">Email</th>
+                                    <td class="table-border table-padding" >{{applicant.email}}</td>
+                                </tr>
+                                 <tr>
+                                    <th class="table-border table-padding" >Phone Number</th>
+                                    <td class="table-border table-padding" style="width:300px;">{{applicant.phone}}</td>
+                                    <th class="table-border table-padding" style="width:200px;">Gender</th>
+                                    <td class="table-border table-padding" >{{applicant.gender}}</td>
+                                </tr>
+                                 <tr>
+                                    <th class="table-border table-padding" >Age</th>
+                                    <td class="table-border table-padding" style="width:300px;">{{applicant.age}}</td>
+                                    <th class="table-border table-padding" style="width:200px;">Address</th>
+                                    <td class="table-border table-padding" >{{applicant.address}}</td>
+                                </tr>
+                                 <tr>
+                                    <th class="table-border table-padding" >License Number</th>
+                                    <td class="table-border table-padding" style="width:300px;">{{applicant.licenseno}}</td>
+                                    <th class="table-border table-padding" style="width:200px;">License Image</th>
+                                    <td class="table-border table-padding" ><img src="{{applicant.licensepic.url}}" width="200px" height="200px" /></td>
+                                </tr>
+                                
+                            </table>
+
+                        </div>
+                        
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+
+  
+{% endblock content %}
+
+
+
+   
